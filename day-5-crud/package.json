@@ -1,0 +1,11 @@
+{
+  "name": "day-5-crud",
+  "version": "1.0.0",
+  "description": "tha",
+  "main": "index.js",
+  "author": "ahsirbad",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^16.7.13"
+  }
+}
