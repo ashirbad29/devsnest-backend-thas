@@ -12,8 +12,7 @@ sequelize.sync();
 		await sequelize.authenticate();
 		console.log('Connection established with DB');
 	} catch (err) {
-		console.log('Unable to connect to db');
-		console.log(err);
+		console.log('Unable to connect to DB', err);
 	}
 })();
 
