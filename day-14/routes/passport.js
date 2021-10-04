@@ -26,3 +26,5 @@ router.get(
 		return res.json('hello user');
 	}
 );
+
+module.exports = router;

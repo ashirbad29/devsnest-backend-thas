@@ -31,10 +31,10 @@ const userRegister = async (userData, role, res) => {
 			user: newUser,
 		});
 	} catch (err) {
-		return res.status(201).json({
-			message: 'you are sucessfully registered',
-			sucesss: true,
-			user: newUser,
+		return res.status(500).json({
+			message: 'Unable to create user',
+			sucesss: false,
+			err: err.message,
 		});
 	}
 };
@@ -98,11 +98,13 @@ const userLogin = async (userCreds, role, res) => {
 
 const validateUsername = async username => {
 	let user = await User.findOne({ where: { username } });
-	return !user;
+	console.log('validate username ', user);
+	return user;
 };
 
 const validateEmail = async email => {
 	let user = await User.findOne({ where: { email } });
+	console.log('validate email: ', user);
 	return !user;
 };
 
